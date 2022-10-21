@@ -69,8 +69,12 @@ async def read_items(q: str = Query(default="fixedquery", min_length=3)):
 
 
 # ellipsis ... 省略号 声明q的值是必须的 required
+# pr #4906 新特性 ... 可以省略
+# Add support for not needing ... as default value 
+# in required Query(), Path(), Header(), etc. #4906
 @app.get("/ellipsis/")
-async def read_items(q: str = Query(default=..., min_length=3)):
+# async def read_items(q: str = Query(default=..., min_length=3)):
+async def read_items(q: str = Query(min_length=3)):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:
         results.update({"q": q})
