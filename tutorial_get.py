@@ -1,3 +1,4 @@
+import os
 import uvicorn
 
 from enum import Enum
@@ -149,4 +150,6 @@ async def read_user_item(
 
 # uvicorn tutorial:app --port 1902 --reload --debug
 if __name__ == '__main__':
-    uvicorn.run(app='tutorial_get:app', host="127.0.0.1", port=1902, reload=True, debug=True)
+    filename = os.path.basename(__file__)
+    filename = filename[:-3]
+    uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)

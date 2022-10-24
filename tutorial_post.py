@@ -1,3 +1,4 @@
+import os
 from enum import Enum
 from typing import Union
 from typing import Optional
@@ -85,4 +86,6 @@ async def create_item(item_id: int, item: Item, q: Union[str, None] = None):
 
 # uvicorn tutorial:app --port 1902 --reload --debug
 if __name__ == '__main__':
-    uvicorn.run(app='tutorial_post:app_post', host="127.0.0.1", port=1902, reload=True, debug=True)
+    filename = os.path.basename(__file__)
+    filename = filename[:-3]
+    uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)

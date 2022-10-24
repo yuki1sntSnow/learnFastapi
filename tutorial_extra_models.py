@@ -1,5 +1,6 @@
 from typing import Union, List, Dict
 
+import os
 import uvicorn
 
 from fastapi import FastAPI, status, Form, File, UploadFile
@@ -210,5 +211,6 @@ async def create_item(name: str):
 
 # uvicorn tutorial:app --port 1902 --reload --debug
 if __name__ == '__main__':
-    uvicorn.run(app='tutorial_extra_models:app', host="127.0.0.1", port=1902, reload=True, debug=True)
-
+    filename = os.path.basename(__file__)
+    filename = filename[:-3]
+    uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)

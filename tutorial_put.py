@@ -1,3 +1,7 @@
+import imp
+
+
+import os
 from typing import Union, List, Set, Dict
 from datetime import datetime, time, timedelta
 # uuid竟然是官方库 x
@@ -547,4 +551,6 @@ async def read_items(
 
 # uvicorn tutorial:app --port 1902 --reload --debug
 if __name__ == '__main__':
-    uvicorn.run(app='tutorial_put:app', host="127.0.0.1", port=1902, reload=True, debug=True)
+    filename = os.path.basename(__file__)
+    filename = filename[:-3]
+    uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)

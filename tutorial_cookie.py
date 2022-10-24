@@ -1,6 +1,7 @@
 from tkinter.messagebox import NO
 from typing import Union, List
 
+import os
 import uvicorn
 
 from fastapi import Cookie, FastAPI, Header
@@ -185,4 +186,6 @@ async def read_item_public_data(item_id: str):
 
 # uvicorn tutorial:app --port 1902 --reload --debug
 if __name__ == '__main__':
-    uvicorn.run(app='tutorial_cookie:app', host="127.0.0.1", port=1902, reload=True, debug=True)
+    filename = os.path.basename(__file__)
+    filename = filename[:-3]
+    uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)

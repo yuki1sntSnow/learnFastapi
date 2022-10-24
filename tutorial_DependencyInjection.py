@@ -1,5 +1,7 @@
+import imp
 from typing import Union
 
+import os
 import uvicorn
 
 from fastapi import Depends, FastAPI, Header, HTTPException
@@ -232,6 +234,7 @@ async def get_db():
 
 # uvicorn tutorial:app --port 1902 --reload --debug
 if __name__ == '__main__':
-    uvicorn.run(app='tutorial_DependencyInjection:app', host="127.0.0.1", port=1902, reload=True, debug=True)
     # uvicorn.run(app='tutorial_DependencyInjection:app_global', host="127.0.0.1", port=1902, reload=True, debug=True)
-
+    filename = os.path.basename(__file__)
+    filename = filename[:-3]
+    uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)
