@@ -1,6 +1,6 @@
 from typing import Union
 
-from main import FastAPI
+from tutorial_main import FastAPI
 
 app = FastAPI()
 

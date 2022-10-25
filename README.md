@@ -1,5 +1,63 @@
 # 随便什么的笔记.jpg
 
+这里是给桐人酱补的教程.jpg（其实我也忘了都要啥环境包了）
+```
+我直接（大概率有不少没用的包） 
+pip freeze > requirements.txt
+环境你就 
+pip install -r requirements.txt
+对了 py版本好像也要3.10+ 
+3.6+ 有几个地方需要改一下格式 x
+以及我把sqlite也扔上去了
+```
+目前手头没有闲置的云了
+
+双十一考虑国内再搞一台服务器放db吧，不然上班摸鱼db同步也是个问题... 
+接下来还要学习orm的语句（sqlalchemy），sql好像不太用学（优先度不高），但是数据库相关的理论知识要补... （还有个表的迁移工具 alembic 也要学？） 
+以及... 我好像能干活了？（错觉）
+
+希望今年能搞一个延迟低一点的... （别3306 晚高峰ping一下500+了
+
+
+## day7
+开始学db，应该是学orm？
+说起来db我好像看到外键还是啥来着就放一边了 = =
+
+另外有个乐子，keyword: 金花姐
+
+感觉这段期间就用这个当随便记录好了.jpg
+
+晚间补充： 算是把整套流程过了一遍在sql_app里面。抽时间把这个和security组合起来 应该就是一个能用的东西了 x
+
+另外今天遇到个坑 是包的相对路径问题 看了个一知半解 反正解决了.jpg
+```
+import os
+import sys
+
+# 包的结构问题的莫名其妙解决方案... 
+# https://stackoverflow.com/questions/16981921
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
+from sql_app import crud, models, schemas
+from sql_app.database import SessionLocal, engine
+
+# 包的结构问题，相对路径
+# from . import crud, models, schemas
+# from .database import SessionLocal, engine
+# 用下面这个没问题
+# import crud, models, schemas
+# from database import SessionLocal, engine
+```
+
+对了，还要追加一点。我的翻译之魂moemoe（误）起来了 x
+
+转念一想，学这个的人多少都会点英语吧... 对吧... 是吧... 没错... 
+不过好多技术名词我不知道啥意思，不太好意思给社区文档做汉化 x
+
+等我再学一学的吧.jpg
+
+---
 ## day6 
 
 非常愉悦的周末，lgd回家了。好似喵，好似。（问就是败人品

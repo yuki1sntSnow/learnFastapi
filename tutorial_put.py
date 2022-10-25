@@ -552,5 +552,6 @@ async def read_items(
 # uvicorn tutorial:app --port 1902 --reload --debug
 if __name__ == '__main__':
     filename = os.path.basename(__file__)
+    print(filename)
     filename = filename[:-3]
     uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)

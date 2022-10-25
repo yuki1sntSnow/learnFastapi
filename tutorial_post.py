@@ -88,4 +88,4 @@ async def create_item(item_id: int, item: Item, q: Union[str, None] = None):
 if __name__ == '__main__':
     filename = os.path.basename(__file__)
     filename = filename[:-3]
-    uvicorn.run(app=filename+':app', host="127.0.0.1", port=1902, reload=True, debug=True)
+    uvicorn.run(app=filename+':app_post', host="127.0.0.1", port=1902, reload=True, debug=True)
