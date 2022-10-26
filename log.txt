@@ -1,0 +1,7 @@
+notification for 111: some notificationmessage to aaaaa
+message to 123
+message to 123
+found query: q
+message to 123
+found query: aaa
+message to 123
