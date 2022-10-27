@@ -17,7 +17,30 @@ pip install -r requirements.txt
 以及... 我好像能干活了？（错觉）
 
 希望今年能搞一个延迟低一点的... （别3306 晚高峰ping一下500+了
+## day9
 
+摸了一上午，下午睡醒看了一下官网文档的部署，于是乎想先学一下docker了.jpg
+
+另外官方的高级文档里，好像都是看不太懂的东西... 
+打算先找个项目开始一点点啃啃看 
+还是在2选1的阶段，都同时看看吧...
+```
+一个国人项目，跑了一下demo还行
+./fastapi_amis_admin/admin/admin.py
+这个文件看着很头疼... 
+https://github.com/amisadmin/fastapi_amis_admin
+```
+
+```
+以及这个是作者自己的项目
+看起来好复杂，配了好多库... 学习成本好像挺高的...
+我还没部署出来，环境就把我卡住了.jpg
+https://github.com/tiangolo/full-stack-fastapi-postgresql
+```
+
+不知道还有没有什么适合新人的项目，第一次学这种东西最困扰的还是好多第三方库的学习成本... 
+
+---
 ## day8
 
 入门文档都看完了，接下来打算试试找个项目跟一下了.jpg
