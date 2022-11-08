@@ -18,6 +18,26 @@ pip install -r requirements.txt
 
 希望今年能搞一个延迟低一点的... （别3306 晚高峰ping一下500+了
 
+## day11
+
+追加一个桐人酱给我做的 dolist.jpg （md我也直接毛过来了）
+
+```
+https://www.yuque.com/kirito-666/cpyl2g/wpkwtg?
+```
+
+今天把 sqlalchemy1.4版本的入门语句看了一下
+
+然后简单的试了试用orm建了个sqlite库
+
+好像不能增加字段 要配合alembic （以后在学
+
+用户的注册登录登出页面打算开始做了.jpg
+
+我好像还需要个jinja2的模板库来放页面？ 不确定，不懂.jpg
+
+总之 摸了 充实的一天 x
+
 ## day10？（大概吧）
 
 看了一天 sqlalchemy 人是懵的 没有db的前置知识 看着有点累
