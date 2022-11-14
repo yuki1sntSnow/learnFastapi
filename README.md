@@ -10,6 +10,21 @@ pip install -r requirements.txt
 3.6+ 有几个地方需要改一下格式 x
 以及我把sqlite也扔上去了
 ```
+
+---
+
+## 111422周 改周记了（
+
+~~本周半人马产量+8（误~~
+
+本周计划:
+
+大概是把 Nginx, Let's Encrypt(SSL), gunicorn, uvicorn部署到云上，然后把之前弄的登录页面成功跑起来。一个简单的静态提交表单+fastapi的返回页面，psql要不要弄再议。
+
+成功之后再学dockerfile怎么写。（另外打算学一下CI/CD的部署，github action 好像是这个）
+
+--- 
+
 目前手头没有闲置的云了
 
 双十一考虑国内再搞一台服务器放db吧，不然上班摸鱼db同步也是个问题... 
